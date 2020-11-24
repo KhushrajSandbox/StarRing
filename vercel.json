@@ -1,0 +1,6 @@
+{
+	"version": 2,
+	"redirects": [
+		{ "source": "/", "destination": "https://github.com/KhushrajRathod/StarRing"}
+	]
+}
