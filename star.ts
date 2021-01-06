@@ -1,6 +1,6 @@
-const users: string[] = await (await fetch('https://raw.githubusercontent.com/KhushrajRathod/StarRing/main/users.json')).json()
+const users: string[] = await(fetch('https://raw.githubusercontent.com/KhushrajRathod/StarRing/main/users.json')).then(r => {r.json()});
 users.forEach(async user => {
-    const userRepos = await(await fetch(`https://api.github.com/users/${user}/repos`)).json()
+    const userRepos = await(fetch(`https://api.github.com/users/${user}/repos`)).then(r => {r.json()});
     userRepos.forEach((userRepo: any) => {
         fetch(`https://api.github.com/user/starred/${user}/${userRepo.name}`, {
             method: 'PUT',
