@@ -16,7 +16,9 @@ users.forEach(async user => {
                 }
             })
         })
-    } catch {}
+    } catch (e) {
+        console.error("Error: " + e)
+    }
 })
 
 export { } // Classify as TypeScript module
